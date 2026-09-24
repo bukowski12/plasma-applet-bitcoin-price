@@ -1,0 +1,23 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "makg@makg.eu",
+                "Name": "Maciej Gierej"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Shows current price of Bitcoin on the market.",
+        "Description[en_GB]": "Shows current price of Bitcoin on the market.",
+        "Description[pl]": "Pokazuje aktualny kurs Bitcoina.",
+        "Icon": "bitcoin128",
+        "Id": "org.kde.plasma.bitcoinprice",
+        "License": "MIT",
+        "Name": "Bitcoin Price",
+        "Name[en_GB]": "Bitcoin Price",
+        "Name[pl]": "Bitcoin - Kurs",
+        "Version": "1.2.2",
+        "Website": "http://maciej.gierej.pl"
+    },
+    "KPackageStructure": "Plasma/Applet"
+}
