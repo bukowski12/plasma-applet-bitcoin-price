@@ -1,11 +1,13 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.1
+import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 
 import ".."
 import "../../code/bitcoin.js" as Bitcoin
 
-Item {
+KCM.SimpleKCM {
 	id: configGeneral
 	Layout.fillWidth: true
 	property string cfg_source: plasmoid.configuration.source
@@ -16,6 +18,14 @@ Item {
 	property alias cfg_showText: showText.checked
 	property alias cfg_showDecimals: showDecimals.checked
 	property alias cfg_showBackground: showBackground.checked
+	property string cfg_sourceDefault: "Blockchain.info"
+	property string cfg_currencyDefault: "USD"
+	property int cfg_refreshRateDefault: 10
+	property bool cfg_showIconDefault: true
+	property bool cfg_showTextDefault: true
+	property string cfg_onClickActionDefault: "refresh"
+	property bool cfg_showDecimalsDefault: true
+	property bool cfg_showBackgroundDefault: true
 	property variant sourceList: { Bitcoin.getAllSources() }
 	property variant currencyList: { Bitcoin.getAllCurrencies() }
 
@@ -29,8 +39,8 @@ Item {
 		ComboBox {
 			id: source
 			model: sourceList
-			Layout.minimumWidth: theme.mSize(theme.defaultFont).width * 15
-			onActivated: {
+			Layout.minimumWidth: Kirigami.Units.gridUnit * 15
+			onActivated: function(index) {
 				cfg_source = source.textAt(index)
 			}
 			Component.onCompleted: {
@@ -49,8 +59,8 @@ Item {
 		ComboBox {
 			id: currency
 			model: currencyList
-			Layout.minimumWidth: theme.mSize(theme.defaultFont).width * 15
-			onActivated: {
+			Layout.minimumWidth: Kirigami.Units.gridUnit * 15
+			onActivated: function(index) {
 				cfg_currency = currency.textAt(index)
 			}
 			Component.onCompleted: {
@@ -154,3 +164,4 @@ Item {
 		}
 	}
 }
+
