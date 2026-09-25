@@ -1,41 +1,43 @@
 # Bitcoin Price Plasmoid
 
 ## About
-Plasma applet showing the current price of Bitcoin from various markets to choose from. The plasmoid can also convert the price to a desired currency.
+Plasma 6 applet showing the current price of Bitcoin from several markets. The widget can display the price in USD or EUR, with optional decimals and icon/text display.
 
-Written by Maciej Gierej - http://makg.eu
+Written by Maciej Gierej and Bukowski12 - https://maciej.gierej.pl
 
 ## Installation
+Install the local package for the current user:
+
 ```
-plasmapkg2 -i package
+kpackagetool6 --type Plasma/Applet --install package
 ```
 
-Use additional `-g` flag to install plasmoid globally, for all users.
+To update an existing installation, use:
+
+```
+kpackagetool6 --type Plasma/Applet --upgrade package
+```
+
+Use the `-g` option to install the applet globally for all users.
 
 ## Supported sources
-- CoinMarketCap
-- Bitmarket.pl
-- Bitmaszyna.pl
-- BitBay
 - Blockchain.info
 - Bitfinex
 - Bitstamp
 - Kraken
-- GDAX
-- Cex.io
 
 ## Supported currencies
 - USD ($) - US Dollar
 - EUR (€) - Euro
-- CZK (Kč) - Czech Coruna
-- GBP (£) - British Pound Sterling
-- ILS (₪) - Israeli New Sheqel
-- INR (₹) - Indian Rupee
-- JPY (¥) - Japanese Yen
-- KRW (₩) - South Korean Won
-- PHP (₱) - Philippine Peso
-- PLN (zł) - Polish Zloty
-- THB (฿) - Thai Baht
+
+## Configuration
+- Market source
+- Currency
+- Refresh interval in minutes
+- Show or hide the icon
+- Show or hide the price text
+- Show or hide decimal places
+- Refresh the price or open the market website when clicked
 
 ## Screenshots
 ![Bitcoin Price Plasmoid](https://raw.githubusercontent.com/MakG10/plasma-applet-bitcoin-price/master/bitcoin-price-plasmoid.png)
@@ -49,6 +51,11 @@ Use additional `-g` flag to install plasmoid globally, for all users.
 - NasCorp
 
 ## Changelog
+
+### 2.1.0
+- Ported the applet to Plasma 6
+- Updated the exchange API definitions
+- Added USD and EUR market support
 
 ### 1.2.2
 - Removed outdated APIs

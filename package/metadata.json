@@ -4,20 +4,26 @@
             {
                 "Email": "makg@makg.eu",
                 "Name": "Maciej Gierej"
+            },
+            {
+                "Email": "bukowski12@gmail.com",
+		        "Name": "Bukowski12"
+
             }
         ],
         "Category": "Utilities",
         "Description": "Shows current price of Bitcoin on the market.",
         "Description[en_GB]": "Shows current price of Bitcoin on the market.",
         "Description[pl]": "Pokazuje aktualny kurs Bitcoina.",
-        "Icon": "bitcoin128",
         "Id": "org.kde.plasma.bitcoinprice",
         "License": "MIT",
         "Name": "Bitcoin Price",
         "Name[en_GB]": "Bitcoin Price",
         "Name[pl]": "Bitcoin - Kurs",
-        "Version": "1.2.2",
-        "Website": "http://maciej.gierej.pl"
+        "Icon": "images/bitcoin.svg",
+        "Version": "2.1.0",
+        "Website": "https://maciej.gierej.pl"
     },
+    "X-Plasma-API-Minimum-Version": "6.0",
     "KPackageStructure": "Plasma/Applet"
 }
