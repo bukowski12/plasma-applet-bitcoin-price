@@ -18,7 +18,6 @@ PlasmoidItem {
 
     preferredRepresentation: compactRepresentation
     toolTipTextFormat: Text.RichText
-    Plasmoid.icon: "bitcoin128"
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
